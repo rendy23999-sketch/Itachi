@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#4a7dff,#1d3d9b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+/* Background Bintang */
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:radial-gradient(white 1px, transparent 1px);
+    background-size:35px 35px;
+    opacity:.5;
+    animation:bintang 18s linear infinite;
+}
+
+@keyframes bintang{
+    from{transform:translateY(0);}
+    to{transform:translateY(35px);}
+}
+
+/* Card */
+.card{
+    position:relative;
+    width:90%;
+    max-width:380px;
+    padding:30px;
+    text-align:center;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.2);
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    z-index:2;
+}
+
+/* Video Profil */
+.profile{
+    width:120px;
+    height:120px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid #63d3ff;
+    box-shadow:0 0 25px #63d3ff;
+}
+
+.profile video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+h1{
+    color:#fff;
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+p{
+    color:#e7ecff;
+    margin-bottom:25px;
+}
+
+/* Tombol */
+button{
+    width:100%;
+    padding:16px;
+    margin:10px 0;
+    border:none;
+    border-radius:15px;
+    background:#4ea3ff;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+/* Popup */
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.popup-box{
+    width:90%;
+    max-width:360px;
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    animation:muncul .25s;
+}
+
+.popup-box h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.popup-box pre{
+    white-space:pre-wrap;
+    line-height:1.7;
+    font-size:16px;
+}
+
+.tutup{
+    margin-top:20px;
+    background:#ff4d4d;
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}

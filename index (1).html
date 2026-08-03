@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELAS 11 TKR</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Bintang -->
+    <div class="stars"></div>
+
+    <!-- Card -->
+    <div class="card">
+
+        <!-- Video Profil -->
+        <div class="profile">
+            <video autoplay muted loop playsinline>
+                <source src="Itachi.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <h1>KELAS 11 TKR</h1>
+        <p>@rendev</p>
+
+        <button onclick="buka('pelajaran')">
+            📚 Jadwal Pelajaran
+        </button>
+
+        <button onclick="buka('piket')">
+            🧹 Jadwal Piket
+        </button>
+
+        <button onclick="buka('organisasi')">
+            👥 Organisasi Yakuza
+        </button>
+
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-box">
+
+            <h2 id="judul"></h2>
+
+            <div id="isi"></div>
+
+            <button class="tutup" onclick="tutup()">
+                Tutup
+            </button>
+
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
